@@ -107,5 +107,13 @@ namespace ManagerCakeOk.Controllers
             var result = await _context.PostEditStatusDistrict(Id, Status);
             return new JsonResult(result);
         }
+
+        //Call all distric by this Id city
+        [HttpGet]
+        public IActionResult GetAllDistricById(int IdCity)
+        {
+            var Result = _context.GetAllDistrictByIdCity(IdCity);
+            return new JsonResult(Result);
+        }
     }
 }

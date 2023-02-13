@@ -2137,11 +2137,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.DomainData\\Library.DomainData.csproj",
+      "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.DomainData\\Library.DomainData.csproj",
       "projectName": "Library.DomainData",
-      "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.DomainData\\Library.DomainData.csproj",
+      "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.DomainData\\Library.DomainData.csproj",
       "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
-      "outputPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.DomainData\\obj\\",
+      "outputPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.DomainData\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2158,11 +2158,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ConfigurationData\\Library.ConfigurationData.csproj": {
-              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ConfigurationData\\Library.ConfigurationData.csproj"
+            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ConfigurationData\\Library.ConfigurationData.csproj": {
+              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ConfigurationData\\Library.ConfigurationData.csproj"
             },
-            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.DataTable\\Library.DataTable.csproj": {
-              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.DataTable\\Library.DataTable.csproj"
+            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.DataTable\\Library.DataTable.csproj": {
+              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.DataTable\\Library.DataTable.csproj"
             }
           }
         }

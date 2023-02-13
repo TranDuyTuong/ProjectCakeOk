@@ -2036,11 +2036,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj",
+      "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj",
       "projectName": "Library.ServiceAdmin",
-      "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj",
+      "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ServiceAdmin\\Library.ServiceAdmin.csproj",
       "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
-      "outputPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ServiceAdmin\\obj\\",
+      "outputPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ServiceAdmin\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2057,14 +2057,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.DataTable\\Library.DataTable.csproj": {
-              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.DataTable\\Library.DataTable.csproj"
+            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.DataTable\\Library.DataTable.csproj": {
+              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.DataTable\\Library.DataTable.csproj"
             },
-            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.Repository\\Library.Repository.csproj": {
-              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.Repository\\Library.Repository.csproj"
+            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.Repository\\Library.Repository.csproj": {
+              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.Repository\\Library.Repository.csproj"
             },
-            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ViewModel\\Library.ViewModel.csproj": {
-              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ViewModel\\Library.ViewModel.csproj"
+            "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ViewModel\\Library.ViewModel.csproj": {
+              "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ViewModel\\Library.ViewModel.csproj"
             }
           }
         }

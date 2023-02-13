@@ -69,5 +69,7 @@ namespace ManagerCakeOk.Controllers
             var result = _context.GetInfoCreateAccount();
             return new JsonResult(result);
         }
+
+        
     }
 }

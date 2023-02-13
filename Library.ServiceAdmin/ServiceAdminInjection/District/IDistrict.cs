@@ -27,5 +27,8 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.District
         Task<GetAllDistrict> EditStatusDistrict(int Id);
 
         Task<NotificationDistirct> PostEditStatusDistrict(int Id, bool Status);
+
+        //Get All Distric by Id City
+        List<GetAllDistrict> GetAllDistrictByIdCity(int IdCity);
     }
 }

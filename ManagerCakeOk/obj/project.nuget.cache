@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OXHGu8GFkUmI3x7vsbMvbJmUUFmqMgdGtpgJYElDSNZrmAX94yUaDvJoMfHUCMAu7UEMUG5kh5o5SyZIgO0H8w==",
+  "dgSpecHash": "MSGkkhfFTW9L+kQtUnwEEWbVK2cKmxdDgcTLQM6Kb2xSeoJEtOfl0S3e5Zu9so8vZjYt4yyYs+QBS6PLVF9CHw==",
   "success": true,
-  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\ManagerCakeOk\\ManagerCakeOk.csproj",
+  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\ManagerCakeOk\\ManagerCakeOk.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duytu\\.nuget\\packages\\epplus\\6.1.1\\epplus.6.1.1.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\epplus.interfaces\\6.1.1\\epplus.interfaces.6.1.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ViewModel\\Library.ViewModel.csproj": {}
+    "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ViewModel\\Library.ViewModel.csproj": {}
   },
   "projects": {
-    "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ViewModel\\Library.ViewModel.csproj": {
+    "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ViewModel\\Library.ViewModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ViewModel\\Library.ViewModel.csproj",
+        "projectUniqueName": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ViewModel\\Library.ViewModel.csproj",
         "projectName": "Library.ViewModel",
-        "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ViewModel\\Library.ViewModel.csproj",
+        "projectPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ViewModel\\Library.ViewModel.csproj",
         "packagesPath": "C:\\Users\\duytu\\.nuget\\packages\\",
-        "outputPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ViewModel\\obj\\",
+        "outputPath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ViewModel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\duytu\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -10,3 +10,14 @@ D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Libr
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.DataTable\obj\Debug\net5.0\ref\Library.DataTable.dll
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.DataTable\obj\Debug\net5.0\Library.DataTable.pdb
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.DataTable\obj\Debug\net5.0\Library.DataTable.csproj.AssemblyReference.cache
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\bin\Debug\net5.0\Library.DataTable.deps.json
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\bin\Debug\net5.0\Library.DataTable.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\bin\Debug\net5.0\ref\Library.DataTable.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\bin\Debug\net5.0\Library.DataTable.pdb
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\obj\Debug\net5.0\Library.DataTable.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\obj\Debug\net5.0\Library.DataTable.AssemblyInfoInputs.cache
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\obj\Debug\net5.0\Library.DataTable.AssemblyInfo.cs
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\obj\Debug\net5.0\Library.DataTable.csproj.CoreCompileInputs.cache
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\obj\Debug\net5.0\Library.DataTable.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\obj\Debug\net5.0\ref\Library.DataTable.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.DataTable\obj\Debug\net5.0\Library.DataTable.pdb

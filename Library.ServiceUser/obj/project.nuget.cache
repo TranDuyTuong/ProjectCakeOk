@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QSWNQ4S+tKYY+qBuiuQ9AtnnugiW3nu1EJQMy4CjdRqoCwlm4TRUql7D/D2HimdJLiMdwhVhkY2nJAvNai1Jog==",
+  "dgSpecHash": "sYeTVYJ0Iw5ipAZI6x/D2ZEqS0gHDcylPsFLmF+jxMt3I+PAXgSTQPaAFtmZXktyAJFO94vbxpd2oBxuvp8yIA==",
   "success": true,
-  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.ServiceUser\\Library.ServiceUser.csproj",
+  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.ServiceUser\\Library.ServiceUser.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

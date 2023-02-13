@@ -164,5 +164,25 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.District
             }
             return result;
         }
+
+        //get all district by id city
+        public List<GetAllDistrict> GetAllDistrictByIdCity(int IdCity)
+        {
+            var Query = this.unitOfWork.districtRepo.GetAll().Where(x => x.IDCity == IdCity);
+            var result = new List<GetAllDistrict>();
+            foreach(var item in Query)
+            {
+                var data = new GetAllDistrict()
+                {
+                    Id = item.IDDistrict,
+                    IdCity = item.IDCity,
+                    Name = item.Name
+                };
+                result.Add(data);
+            }
+            return result;
+        }
+
+
     }
 }

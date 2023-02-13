@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "SZP03p+cDOhJxFiLhD0nKNPR+mes41SyE38r5NNjcA9geYX0zlIcABTWtdt5kprl+pLEZqiaCsYjeOL2mI0MKw==",
+  "dgSpecHash": "Kj/lIBvtsra3mfl1iMD6NYySS+oBMcVjxnYWWXH1WucL2jgQlrhaIvBdM2OvOQ/GB9ll0kce3BFa/Z8IG4BMag==",
   "success": true,
-  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\CakeOk\\CakeOk.csproj",
+  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\CakeOk\\CakeOk.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duytu\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\k4os.compression.lz4\\1.2.6\\k4os.compression.lz4.1.2.6.nupkg.sha512",

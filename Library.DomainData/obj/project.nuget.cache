@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GfpPEHsYlMcLjnsFbUlMaFh9lViHdIM68Kbfrqhbpv5950nM86r1ibUezVa2KS27T39WZBj8MeosFZh1oRpTCA==",
+  "dgSpecHash": "j7T4CODaHJVQiXoBeIHbL4nzh2l1dqjkyDRO7JPZo+GMqh+w2Cv0Sz4coZcUjFfW1dAnVkcBU85aW6NV8nLfOA==",
   "success": true,
-  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\ProjectWebsiteCakeOk\\Library.DomainData\\Library.DomainData.csproj",
+  "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\Library.DomainData\\Library.DomainData.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\duytu\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
