@@ -297,6 +297,18 @@ function CheckSpecialCharacter() {
     }
 }
 
+//check password UpperCake
+function CheckUpperCake() {
+    var Item = $("#TxtPassWord").val();
+    if (Item.search(/[A-Z]/) == -1) {
+        EmptyNotification();
+        $("#ErrorPasswordConfirm").append("Mật khẩu phải có chứa chữ in hoa");
+        return false;
+    } else {
+        return true;
+    }
+}
+
 //Empty Notification Error
 function EmptyNotification() {
     $("#ErrorEmail").empty();
