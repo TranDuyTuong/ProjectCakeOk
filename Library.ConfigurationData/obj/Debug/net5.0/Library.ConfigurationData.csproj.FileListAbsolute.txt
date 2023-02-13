@@ -1,0 +1,15 @@
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\bin\Debug\net5.0\Library.ConfigurationData.deps.json
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\bin\Debug\net5.0\Library.ConfigurationData.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\bin\Debug\net5.0\ref\Library.ConfigurationData.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\bin\Debug\net5.0\Library.ConfigurationData.pdb
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\bin\Debug\net5.0\Library.DataTable.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\bin\Debug\net5.0\Library.DataTable.pdb
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\obj\Debug\net5.0\Library.ConfigurationData.csproj.AssemblyReference.cache
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\obj\Debug\net5.0\Library.ConfigurationData.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\obj\Debug\net5.0\Library.ConfigurationData.AssemblyInfoInputs.cache
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\obj\Debug\net5.0\Library.ConfigurationData.AssemblyInfo.cs
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\obj\Debug\net5.0\Library.ConfigurationData.csproj.CoreCompileInputs.cache
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\obj\Debug\net5.0\Library.ConfigurationData.csproj.CopyComplete
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\obj\Debug\net5.0\Library.ConfigurationData.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\obj\Debug\net5.0\ref\Library.ConfigurationData.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ConfigurationData\obj\Debug\net5.0\Library.ConfigurationData.pdb

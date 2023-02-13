@@ -1,0 +1,12 @@
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\bin\Debug\net5.0\Library.ServiceUser.deps.json
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\bin\Debug\net5.0\Library.ServiceUser.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\bin\Debug\net5.0\ref\Library.ServiceUser.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\bin\Debug\net5.0\Library.ServiceUser.pdb
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\obj\Debug\net5.0\Library.ServiceUser.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\obj\Debug\net5.0\Library.ServiceUser.AssemblyInfoInputs.cache
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\obj\Debug\net5.0\Library.ServiceUser.AssemblyInfo.cs
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\obj\Debug\net5.0\Library.ServiceUser.csproj.CoreCompileInputs.cache
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\obj\Debug\net5.0\Library.ServiceUser.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\obj\Debug\net5.0\ref\Library.ServiceUser.dll
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\obj\Debug\net5.0\Library.ServiceUser.pdb
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\ProjectWebsiteCakeOk\Library.ServiceUser\obj\Debug\net5.0\Library.ServiceUser.csproj.AssemblyReference.cache
