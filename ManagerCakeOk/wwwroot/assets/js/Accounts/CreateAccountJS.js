@@ -2,6 +2,11 @@
     LoadData();
 });
 
+var ErrorHtml = "Vui lòng không bỏ trống!";
+var HtmlChoose = "Vui lòng chọn";
+var Html_NotifiError = "Thông Báo Lỗi";
+var Html_DetailError = "Đã có lỗi xảy ra!";
+
 //load data
 function LoadData() {
     //empty form error
@@ -24,7 +29,7 @@ function LoadData() {
         success: function (result) {
             //marriage
             var HtmlMarraige = '';
-            HtmlMarraige = '<option selected value="0">Vui lòng chọn</option>';
+            HtmlMarraige = '<option selected value="0">' + HtmlChoose + '</option>';
             $("#Select_Marriage").append(HtmlMarraige);
             $.each(result.l_Marriage, function (key, item) {
                 var Html = '';
@@ -34,7 +39,7 @@ function LoadData() {
 
             //City
             var HtmlCity = '';
-            HtmlCity = '<option selected value="0">Vui lòng chọn</option>';
+            HtmlCity = '<option selected value="0">' + HtmlChoose + '</option>';
             $("#Select_City").append(HtmlCity);
             $.each(result.l_City, function (key, item) {
                 var Html = '';
@@ -44,7 +49,7 @@ function LoadData() {
 
             //Gender
             var HtmlGender = '';
-            HtmlGender = '<option selected value="0">Vui lòng chọn</option>';
+            HtmlGender = '<option selected value="0">' + HtmlChoose + '</option>';
             $("#Select_Gender").append(HtmlGender);
             $.each(result.l_Gender, function (key, item) {
                 var Html = '';
@@ -54,7 +59,7 @@ function LoadData() {
 
             //Staff or Chef
             var HtmlStaffChef = '';
-            HtmlStaffChef = '<option selected value="0">Vui lòng chọn</option>';
+            HtmlStaffChef = '<option selected value="0">' + HtmlChoose + '</option>';
             $("#Select_StaffChef").append(HtmlStaffChef);
             $.each(result.l_StaffChef, function (key, item) {
                 var Html = '';
@@ -64,7 +69,7 @@ function LoadData() {
 
             //Role
             var HtmlRole = '';
-            HtmlRole = '<option selected value="0">Vui lòng chọn</option>';
+            HtmlRole = '<option selected value="0">' + HtmlChoose + '</option>';
             $("#Select_Role").append(HtmlRole);
             $.each(result.l_Role, function (key, item) {
                 var Html = '';
@@ -123,7 +128,12 @@ function Vali_Email() {
     if (item.length == 0 || item == '') {
         return false;
     } else {
-        return true;
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+        if (item.match(validRegex)) {
+            return true;
+        } else {
+            return -1;
+        }
     }
 }
 function Vali_PassWord() {
@@ -302,10 +312,23 @@ function CheckUpperCake() {
     var Item = $("#TxtPassWord").val();
     if (Item.search(/[A-Z]/) == -1) {
         EmptyNotification();
-        $("#ErrorPasswordConfirm").append("Mật khẩu phải có chứa chữ in hoa");
+        $("#ErrorPassword").append("Mật khẩu phải có chứa chữ in hoa");
         return false;
     } else {
         return true;
+    }
+}
+
+//check password and confirm password
+function CheckPasswordAndConfirmPassword() {
+    EmptyNotification();
+    var Item = $("#TxtPassWord").val();
+    var ItemComfirm = $("#TxtPassWordConfirm").val();
+    if (Item == ItemComfirm) {
+        return true;
+    } else {
+        $("#ErrorPasswordConfirm").append("2 mật khẩu phải khớp với nhau");
+        return false;
     }
 }
 
@@ -316,6 +339,15 @@ function EmptyNotification() {
     $("#ErrorPasswordConfirm").empty();
     $("#ErrorPhone").empty();
     $("#ErrorFile").empty();
+    $("#ErrorFullName").empty();
+    $("#ErrorBirthday").empty();
+    $("#ErrorMarriage").empty();
+    $("#ErrorCity").empty();
+    $("#ErrorDistrict").empty();
+    $("#ErrorGender").empty();
+    $("#ErrorStaffChef").empty();
+    $("#ErrorRole").empty();
+    $("#ErrorAddress").empty();
 };
 
 //Create Staff
@@ -326,7 +358,81 @@ $("#Btn_Create").click(function () {
     //Check Validate Infomation Account
     var Email = Vali_Email();
     if (Email == false) {
-        $("#ErrorEmail").append("Vui lòng không bỏ trống");
+        $("#ErrorEmail").append(ErrorHtml);
+        toastr.error(Html_NotifiError, "Đã có lỗi xảy ra!");
+        return;
+    }
+    if (Email == -1) {
+        $("#ErrorEmail").append("Email không hợp lệ và đúng cú pháp!");
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    var Password = Vali_PassWord();
+    if (Password == false) {
+        $("#ErrorPassword").append(ErrorHtml);
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    var PassWordSpesical = CheckSpecialCharacter();
+    if (PassWordSpesical == false) {
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    var PassWordCharacter = CheckUpperCake();
+    if (PassWordCharacter == false) {
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    var Password_Confirm = Vali_PassWordConFirm();
+    if (Password_Confirm == false) {
+        $("#ErrorPasswordConfirm").append(ErrorHtml);
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    var CheckTwoPassword = CheckPasswordAndConfirmPassword();
+    if (CheckTwoPassword == false) {
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    var Phone = Vali_Phone();
+    if (Phone == false) {
+        $("#ErrorPhone").append(ErrorHtml);
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    var File = Vali_File();
+    if (File == false) {
+        $("#ErrorFile").append(ErrorHtml);
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    //check Validate Informcation Staff
+    var NameStaff = Vali_NameStaff();
+    if (NameStaff == false) {
+        $("#ErrorFullName").append(ErrorHtml);
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    var BirthdayStaff = Vali_BirthdayStaff();
+    if (BirthdayStaff == false) {
+        $("#ErrorBirthday").append(ErrorHtml);
+        toastr.error(Html_NotifiError, Html_DetailError);
+        return;
+    }
+
+    var AddressStaff = Vali_AddressStaff();
+    if (AddressStaff == false) {
+        $("#ErrorAddress").append(ErrorHtml);
+        toastr.error(Html_NotifiError, Html_DetailError);
         return;
     }
 });
