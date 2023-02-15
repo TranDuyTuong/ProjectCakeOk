@@ -8,7 +8,7 @@ namespace Library.ViewModel.Admin.V_Account
 {
     public class CreateAccount
     {
-        public DateTime CreateDate { get; set; }
+        public DateTime CreateDate { get; set; } //
         public string Password { get; set; }
         public int IDCustomerOrStaff { get; set; }
         public string Email { get; set; }
@@ -24,10 +24,11 @@ namespace Library.ViewModel.Admin.V_Account
         public string TypeImage { get; set; }
         public string MimeType { get; set; }
         public int IdMarriage { get; set; }
-        public int IdAccount { get; set; }
+        public int IdAccount { get; set; } //
         public int IdCity { get; set; }
         public int IdDistrict { get; set; }
         public int IdGender { get; set; }
         public int IdStaffOrChef { get; set; }
+        public Guid IdRole { get; set; }
     }
 }

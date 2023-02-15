@@ -1,5 +1,6 @@
 ﻿using Library.ServiceAdmin.ServiceAdminInjection.Account;
 using Library.ViewModel.Admin.V_Account;
+using ManagerCakeOk.Models.M_Account;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -70,6 +71,13 @@ namespace ManagerCakeOk.Controllers
             return new JsonResult(result);
         }
 
-        
+        [HttpPost]
+        public IActionResult CreateAccountGet(CreateStaff_M request)
+        {
+            return new JsonResult(0);
+        }
+
+
+
     }
 }

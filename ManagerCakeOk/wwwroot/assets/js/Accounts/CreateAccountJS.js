@@ -332,6 +332,78 @@ function CheckPasswordAndConfirmPassword() {
     }
 }
 
+//check was select item 
+function F_SelectCity() {
+    var item = $("#Select_City").val();
+    if (item == 0) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+function F_SelectMarriage() {
+    var item = $("#Select_Marriage").val();
+    if (item == 0) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+function F_SelectDistrict() {
+    var item = $("#Select_District").val();
+    if (item == 0) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+function F_SelectGender() {
+    var item = $("#Select_Gender").val();
+    if (item == 0) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+function F_SelectStaffChef() {
+    var item = $("#Select_StaffChef").val();
+    if (item == 0) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+function F_SelectRole() {
+    var item = $("#Select_Role").val();
+    if (item == 0) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+//Show Image Staff choose in Computer
+var Save_Url;
+//create url for image
+document.getElementById('TxtFile').onchange = e => {
+    $("#TxtShowAvata").empty();
+    if (Save_Url != null) {
+        URL.revokeObjectURL(Save_Url);
+    }
+    const file = e.target.files[0]; // this Object holds a reference to the file on disk
+    console.log(file);
+    const url = URL.createObjectURL(file); // this points to the File object we just created
+    Save_Url = url;
+    var HtmlImg = ' <img src="' + url + '" style="width: 30%;" />'
+    $("#TxtShowAvata").append(HtmlImg);
+    return;
+};
+
 //Empty Notification Error
 function EmptyNotification() {
     $("#ErrorEmail").empty();
@@ -435,4 +507,72 @@ $("#Btn_Create").click(function () {
         toastr.error(Html_NotifiError, Html_DetailError);
         return;
     }
+
+    //check select item
+    var Marriage = F_SelectMarriage();
+    if (Marriage == false) {
+        toastr.error(Html_NotifiError, "Vui lòng chọn tình trạng hôn nhân!");
+        return;
+    }
+    var City = F_SelectCity();
+    if (City == false) {
+        toastr.error(Html_NotifiError, "Vui lòng chọn tỉnh/Tp!");
+        return;
+    }
+    var District = F_SelectDistrict();
+    if (District == false) {
+        toastr.error(Html_NotifiError, "Vui lòng chọn quận/huyện!");
+        return;
+    }
+    var Gender = F_SelectGender();
+    if (Gender == false) {
+        toastr.error(Html_NotifiError, "Vui lòng chọn giới tính!");
+        return;
+    }
+    var StaffOrChef = F_SelectStaffChef();
+    if (StaffOrChef == false) {
+        toastr.error(Html_NotifiError, "Vui lòng chọn nhân viên hoặc đầu bếp!");
+        return;
+    }
+    var Role = F_SelectRole();
+    if (Role == false) {
+        toastr.error(Html_NotifiError, "Vui lòng chọn quyền!");
+        return;
+    }
+
+    //set data create
+    var files = $("#TxtFile").prop("files")
+    var formData = new FormData();
+    for (var i = 0; i < files.length; i++) {
+        formData.append("ImageStaff", files[i]);
+    }
+    var Staff = {
+        Password: $("#TxtPassWord").val(),
+        IDCustomerOrStaff: 1,
+        Email: $("#TxtEmail").val(),
+        UserName: $("#TxtEmail").val(),
+        EmailConfirmed: $("#TxtEmail").val(),
+        PhoneNumber: $("#TxtPhone").val(),
+        FullName: $("#TxtNameSatff").val(),
+        Birthday: $("#TxtBirthday").val(),
+        Address: $("#TxtAddress").val(),
+        IdMarriage: $("#Select_Marriage").val(),
+        IdCity: $("#Select_City").val(),
+        IdDistrict: $("#Select_District").val(),
+        IdGender: $("#Select_Gender").val(),
+        IdStaffOrChef: $("#Select_StaffChef").val(),
+        IdRole: $("#Select_Role").val()
+    }
+    formData.append("CreateStaff", JSON.stringify(Staff));
+    $("#Modal_Loading").show();
+    $.ajax({
+        url: "/Account/CreateAccountGet",
+        type: "post",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (result) {
+            $("#Modal_Loading").hide();
+        }
+    })
 });
