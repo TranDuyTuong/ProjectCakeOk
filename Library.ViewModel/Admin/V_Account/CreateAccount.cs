@@ -28,7 +28,7 @@ namespace Library.ViewModel.Admin.V_Account
         public int IdCity { get; set; }
         public int IdDistrict { get; set; }
         public int IdGender { get; set; }
-        public int IdStaffOrChef { get; set; }
+        public Guid IdStaffOrChef { get; set; }
         public Guid IdRole { get; set; }
     }
 }

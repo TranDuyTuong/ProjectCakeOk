@@ -1,4 +1,5 @@
 ﻿using Library.DataTable.TableStaff;
+using Library.DataTable.TableUser;
 using Library.InterfaceRepository.IUnitOfWork;
 using Library.ViewModel.Admin.V_Account;
 using Library.ViewModel.Admin.V_City;
@@ -156,6 +157,31 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.Account
                 resultData.L_StaffChef.Add(Pull_StaffChef);
             }
             return resultData;
+        }
+
+        //create account
+        public async Task<NotificationAccount> CreateAccount(CreateAccount request)
+        {
+            var result = new NotificationAccount();
+            var Query = await this.unitOfWork.userRepo.GetEmail(request.Email);
+            if(Query != null)
+            {
+                result.Id = 1; //Email already exist
+            }
+            else
+            {
+                Guid Id = new Guid();
+                //Create Account
+                var AccountForm = new T_User();
+                AccountForm.IDAccount = Id;
+                AccountForm.PassWord = request.Password;
+                AccountForm.CreateDate = request.CreateDate;
+                AccountForm.IDCustomerOrStaff = request.IDCustomerOrStaff;
+                AccountForm.UserName = request.UserName;
+                AccountForm.Email = request.Email;
+                this.unitOfWork.userRepo.Add(AccountForm);
+            }
+            throw new NotImplementedException();
         }
     }
 }

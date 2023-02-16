@@ -73,7 +73,7 @@ function LoadData() {
             $("#Select_Role").append(HtmlRole);
             $.each(result.l_Role, function (key, item) {
                 var Html = '';
-                Html = '<option value="' + item.iDRole + '">' + item.nameRole + '</option>';
+                Html = '<option value="' + item.idRole + '">' + item.nameRole + '</option>';
                 $("#Select_Role").append(Html);
             });
         }

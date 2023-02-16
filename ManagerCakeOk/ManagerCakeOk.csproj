@@ -8,6 +8,7 @@
     <ProjectReference Include="..\Library.DomainData\Library.DomainData.csproj" />
     <ProjectReference Include="..\Library.Repository\Library.Repository.csproj" />
     <ProjectReference Include="..\Library.ServiceAdmin\Library.ServiceAdmin.csproj" />
+    <ProjectReference Include="..\Library.Utilities\Library.Utilities.csproj" />
   </ItemGroup>
 
   <ItemGroup>

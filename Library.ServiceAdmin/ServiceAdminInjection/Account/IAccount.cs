@@ -20,5 +20,7 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.Account
 
         //Get Info Create Account
         GetInfoCreate GetInfoCreateAccount();
+
+        Task<NotificationAccount> CreateAccount(CreateAccount request);
     }
 }

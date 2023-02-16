@@ -10,6 +10,7 @@ namespace Library.InterfaceRepository.IGeneric
     {
         Task<T> Get(int id);
         Task<T> GetGuild(Guid id);
+        Task<T> GetEmail(string Email);
         List<T> GetAll();
         void Add(T entity);
         void Delete(T entity);
@@ -17,5 +18,6 @@ namespace Library.InterfaceRepository.IGeneric
         void Save();
         void SaveChangeAsync();
         void Insert(IEnumerable<T> entity);
+
     }
 }
