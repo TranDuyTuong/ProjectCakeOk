@@ -5,6 +5,7 @@
 var ErrorHtml = "Vui lòng không bỏ trống!";
 var HtmlChoose = "Vui lòng chọn";
 var Html_NotifiError = "Thông Báo Lỗi";
+var Html_NotifiSuccess = "Thông Báo Thành Công";
 var Html_DetailError = "Đã có lỗi xảy ra!";
 
 //load data
@@ -573,6 +574,38 @@ $("#Btn_Create").click(function () {
         processData: false,
         success: function (result) {
             $("#Modal_Loading").hide();
+            switch (result.id) {
+                case 1:
+                    toastr.error(Html_NotifiError, "Email Đã Được Dùng Đăng Ký, Vui Lòng Chọn Email Mới!");
+                    break;
+                case 2:
+                    toastr.error(Html_NotifiError, "Số Điện Đã Được Dùng Đăng Ký, Vui Lòng Chọn Số Điện Thoại Mới!");
+                    break;
+                case 3:
+                    toastr.success(Html_NotifiSuccess, "Tạo Mới Một Tài Khoản Nhân Viên Thành Công!");
+                    $("#TxtEmail").val('');
+                    $("#TxtPassWord").val('');
+                    $("#TxtPassWordConfirm").val('');
+                    $("#TxtPhone").val('');
+                    $("#TxtFile").val('');
+                    $("#TxtNameSatff").val('');
+                    $("#TxtBirthday").val('');
+                    $("#TxtAddress").val('');
+                    $("#TxtShowAvata").empty();
+                    $("#Select_District").empty();
+                    $("#Select_District").prop("disabled", true);
+                    var HtmlDefaul = '<option selected value="0">Vui lòng chọn</option>';
+                    $("#Select_District").append(HtmlDefaul);
+                    LoadData();
+                    break;
+                case 4:
+                    toastr.error(Html_NotifiError, "Không Tìm Thấy Quyền Này, Vui Lòng Kiểm Tra Lại!");
+                    break;
+                default:
+                    toastr.error(Html_NotifiError, "Đăng Ký Thất Bại, Vui Lòng Kiểm Tra Lại!");
+                    break;
+            }
+            return;
         }
     })
 });

@@ -1957,8 +1957,7 @@ namespace Library.DomainData.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<byte[]>("ContentFile")
-                        .IsRequired()
-                        .HasColumnType("varbinary(4000)");
+                        .HasColumnType("longblob");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime");

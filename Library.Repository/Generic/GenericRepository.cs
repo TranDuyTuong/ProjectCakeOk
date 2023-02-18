@@ -65,9 +65,5 @@ namespace Library.Repository.Generic
             return await context.Set<T>().FindAsync(id);
         }
 
-        public async Task<T> GetEmail(string Email)
-        {
-            return await context.Set<T>().FindAsync(Email);
-        }
     }
 }

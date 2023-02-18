@@ -14,6 +14,10 @@ function LoadDataAccount() {
     $.ajax({
         url: "/Account/GetAllAccountStaff",
         type: "get",
+        data: {
+            Index: PageIndex,
+            Size: PageSize
+        },
         success: function (result) {
             $.each(result.l_Account, function (key, item) {
                 count++;
@@ -37,7 +41,7 @@ function LoadDataAccount() {
             $("#ItemInPage").append(count);
             $("#TotalAccount").append(result.total);
             //paing
-            paging(Result.total, function () {
+            paging(result.total, function () {
                 LoadDataAccount();
             })
         }

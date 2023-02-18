@@ -11,12 +11,12 @@ namespace Library.Utilities
     public class ConverFileToByte
     {
         //convert IFromFile -> Bye[]
-        public byte[] ConverFromFileToByte(IFormFile request)
+        public async Task<byte[]> ConverFromFileToByte(IFormFile request)
         {
             byte[] ImageConvert;
             using (var ms = new MemoryStream())
             {
-                request.CopyToAsync(ms);
+                await request.CopyToAsync(ms);
                 var FileByte = ms.ToArray();
                 ImageConvert = FileByte;
             }

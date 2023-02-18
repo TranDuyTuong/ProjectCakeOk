@@ -78,7 +78,7 @@ namespace ManagerCakeOk.Controllers
         {
             //conver file to byte
             ConverFileToByte converFile = new ConverFileToByte();
-            byte[] FileConver = converFile.ConverFromFileToByte(request.ImageStaff);
+            byte[] FileConver = await converFile.ConverFromFileToByte(request.ImageStaff);
             string[] Splip = request.ImageStaff.FileName.Split('.');
             //add data into model
             CreateAccount account = new CreateAccount();

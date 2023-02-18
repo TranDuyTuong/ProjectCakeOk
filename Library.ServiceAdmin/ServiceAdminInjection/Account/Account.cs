@@ -1,4 +1,5 @@
-﻿using Library.DataTable.TableStaff;
+﻿using Library.DataTable.TableRole;
+using Library.DataTable.TableStaff;
 using Library.DataTable.TableUser;
 using Library.InterfaceRepository.IUnitOfWork;
 using Library.ViewModel.Admin.V_Account;
@@ -6,6 +7,7 @@ using Library.ViewModel.Admin.V_City;
 using Library.ViewModel.Admin.V_Gender;
 using Library.ViewModel.Admin.V_Marriage;
 using Library.ViewModel.Admin.V_Role;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,9 +19,11 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.Account
     public class Account : IAccount
     {
         private readonly IUnitOfWork unitOfWork;
-        public Account(IUnitOfWork _unitOfWork)
+        private readonly UserManager<T_User> userManager;
+        public Account(IUnitOfWork _unitOfWork, UserManager<T_User> _userManager)
         {
             unitOfWork = _unitOfWork;
+            userManager = _userManager;
         }
 
         //create staff or chef
@@ -163,25 +167,85 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.Account
         public async Task<NotificationAccount> CreateAccount(CreateAccount request)
         {
             var result = new NotificationAccount();
-            var Query = await this.unitOfWork.userRepo.GetEmail(request.Email);
-            if(Query != null)
+            var Query = this.unitOfWork.userRepo.GetAll();
+            var QueryStaff = this.unitOfWork.staffRepo.GetAll();
+            var QueryRole = await this.unitOfWork.roleRepo.GetGuild(request.IdRole);
+
+            var CheckEmailUser = Query.Find(x => x.Email == request.Email);
+            if(CheckEmailUser != null)
             {
                 result.Id = 1; //Email already exist
             }
             else
             {
-                Guid Id = new Guid();
-                //Create Account
-                var AccountForm = new T_User();
-                AccountForm.IDAccount = Id;
-                AccountForm.PassWord = request.Password;
-                AccountForm.CreateDate = request.CreateDate;
-                AccountForm.IDCustomerOrStaff = request.IDCustomerOrStaff;
-                AccountForm.UserName = request.UserName;
-                AccountForm.Email = request.Email;
-                this.unitOfWork.userRepo.Add(AccountForm);
+                var CheckPhoneStaff = QueryStaff.Find(x => x.Phone == request.PhoneNumber);
+                if(CheckPhoneStaff != null)
+                {
+                    result.Id = 2; //Phone already exist
+                }
+                else
+                {
+                    if(QueryRole == null)
+                    {
+                        result.Id = 4; // Not Find Id Role
+                    }
+                    else
+                    {
+                        Guid Id = Guid.NewGuid();
+                        //Create Account
+                        var AccountForm = new T_User();
+                        AccountForm.IDAccount = Id;
+                        AccountForm.PassWord = "Ivali";
+                        AccountForm.CreateDate = request.CreateDate;
+                        AccountForm.IDCustomerOrStaff = request.IDCustomerOrStaff;
+                        AccountForm.UserName = request.UserName;
+                        AccountForm.Email = request.Email;
+                        var InsertAccount = await userManager.CreateAsync(AccountForm, request.Password);
+                        if(InsertAccount.Succeeded == false)
+                        {
+                            result.Id = 5; // Create Account Fail;
+                        }
+                        else
+                        {
+                            Guid G_IDStaff = Guid.NewGuid();
+                            //create infomation staff
+                            var StaffForm = new T_Staff();
+                            StaffForm.IDStaff = G_IDStaff;
+                            StaffForm.FullName = request.FullName;
+                            StaffForm.Birthday = request.Birthday;
+                            StaffForm.Address = request.Address;
+                            StaffForm.Phone = request.PhoneNumber;
+                            StaffForm.IDCode = Convert.ToString(request.Birthday + request.PhoneNumber);
+                            StaffForm.ContentFile = request.ContentFile;
+                            StaffForm.FileName = request.FileName;
+                            StaffForm.TypeImage = request.TypeImage;
+                            StaffForm.MimeType = request.MimeType;
+                            StaffForm.CreateDate = request.CreateDate;
+                            StaffForm.IDMarriage = request.IdMarriage;
+                            StaffForm.IDAccount = AccountForm.IDAccount;
+                            StaffForm.IDCustomerOrStaff = request.IDCustomerOrStaff;
+                            StaffForm.IDCity = request.IdCity;
+                            StaffForm.IDDistrict = request.IdDistrict;
+                            StaffForm.IDGender = request.IdGender;
+                            StaffForm.IDStaffOrChef = request.IdStaffOrChef;
+                            this.unitOfWork.staffRepo.Add(StaffForm);
+
+                            //Create User Role
+                            var UserRole = new T_UserRole();
+                            UserRole.CreateDate = request.CreateDate;
+                            UserRole.Status = true;
+                            UserRole.IDRole = request.IdRole;
+                            UserRole.IDStaff = G_IDStaff;
+                            this.unitOfWork.userRoleRepo.Add(UserRole);
+
+                            //save in database
+                            this.unitOfWork.Commit();
+                            result.Id = 3; //create account and staff success
+                        }
+                    }
+                }
             }
-            throw new NotImplementedException();
+            return result;
         }
     }
 }
