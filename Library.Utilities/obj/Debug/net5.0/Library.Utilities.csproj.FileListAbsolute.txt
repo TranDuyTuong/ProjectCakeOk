@@ -14,6 +14,7 @@ D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\bin\Debug\net5.0\Library.Utilities.dll
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\bin\Debug\net5.0\ref\Library.Utilities.dll
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\bin\Debug\net5.0\Library.Utilities.pdb
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\obj\Debug\net5.0\Library.Utilities.csproj.AssemblyReference.cache
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\obj\Debug\net5.0\Library.Utilities.GeneratedMSBuildEditorConfig.editorconfig
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\obj\Debug\net5.0\Library.Utilities.AssemblyInfoInputs.cache
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\obj\Debug\net5.0\Library.Utilities.AssemblyInfo.cs
@@ -21,4 +22,3 @@ D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\obj\Debug\net5.0\Library.Utilities.dll
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\obj\Debug\net5.0\ref\Library.Utilities.dll
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\obj\Debug\net5.0\Library.Utilities.pdb
-D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\Library.Utilities\obj\Debug\net5.0\Library.Utilities.csproj.AssemblyReference.cache

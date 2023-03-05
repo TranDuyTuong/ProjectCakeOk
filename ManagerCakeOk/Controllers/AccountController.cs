@@ -92,6 +92,21 @@ namespace ManagerCakeOk.Controllers
             return new JsonResult(result);
         }
 
+        /// <summary>Detail Infomation Account Get </summary>
+        [HttpGet]
+        public IActionResult DetailAccountGet(Guid IdAccount)
+        {
+            ViewBag.IdAccount = IdAccount;
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DetailAccountPost(Guid IdAccount)
+        {
+            var Result = await _context.DetailAccount(IdAccount);
+            return new JsonResult(Result);
+        }
+
 
 
     }

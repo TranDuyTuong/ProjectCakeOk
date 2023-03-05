@@ -247,5 +247,30 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.Account
             }
             return result;
         }
+
+        //Detail Acount
+        public async Task<DetailAccount> DetailAccount(Guid IdAccount)
+        {
+            var FormModel = new DetailAccount();
+            var QueryData = await this.unitOfWork.userRepo.GetGuild(IdAccount);
+            var QueryCustomerStaff = this.unitOfWork.customerOrStaffRepo.GetAll();
+            var QueryStaffOrChef = this.unitOfWork.staffOrChefRepo.GetAll();
+            var QueryStaff = this.unitOfWork.staffRepo.GetAll();
+            if(QueryData.IDAccount != new Guid())
+            {
+                FormModel.IdAccount = QueryData.IDAccount;
+                FormModel.CreateDate = QueryData.CreateDate;
+                FormModel.NameCustomerOfStaff = QueryCustomerStaff
+                    .FirstOrDefault(x => x.IDCustomerOrStaff == QueryData.IDCustomerOrStaff).Name;
+                FormModel.IdStaff = QueryStaff.FirstOrDefault(x => x.IDAccount == QueryData.IDAccount).IDStaff;
+                FormModel.Email = QueryData.Email;
+                FormModel.PhoneNumber = QueryData.PhoneNumber;
+                FormModel.NameStaffOrChef = QueryStaffOrChef
+                   .FirstOrDefault(x => x.IDStaffOrChef == QueryStaff
+                        .FirstOrDefault(x => x.IDAccount == QueryData.IDAccount).IDStaffOrChef).Name;
+            }
+            return FormModel;
+        }
     }
+
 }

@@ -74,69 +74,7 @@
         </div><!-- End Right side columns -->
     </section>
 
-    <!--Modal Edit City-->
-    <div class="modal" tabindex="-1" id="M_EditCity" style="background-color: #000000a6;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Cập Nhật Tỉnh/Tp</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="BtnClose"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Mã Tỉnh/Tp</label>
-                        <input type="text" class="form-control" id="TxtEditIDCity" disabled />
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Tên Tỉnh/Tp</label>
-                        <input type="text" class="form-control" id="TxtEditCity" />
-                        <div id="ErrorHelp" class="form-text" style="color: red;"></div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="Btn_Update"><i class="fas fa-edit"></i> Thay Đổi</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!--Modal Edit Status-->
-    <div class="modal" tabindex="-1" id="M_EditStatus" style="background-color: #000000a6;">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Đổi Trạng Thái Tỉnh/Tp</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="BtnCloseStatus"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="TxtIDCity" disabled />
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="TxtNameCity" disabled />
-                    </div>
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="TxtStatusCity" disabled />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Lựa Chọn Trạng Thái</label>
-                        <select class="form-select" id="TxtSelectStatus">
-                            <option selected value="0">-- Chọn Trạng Thái --</option>
-                            <option value="1">Đang Hoạt Động</option>
-                            <option value="2">Ngưng Hoạt Động</option>
-                        </select>
-                        <div id="ErrorStatus" class="form-text" style="color: red;"></div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" id="Btn_UpdateSetting"><i class="fas fa-edit"></i> Thay Đổi</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal loading create Music -->
+    <!-- Modal loading -->
     <div class="modal" tabindex="-1" style="background-color: #000000a6;" id="Modal_Loading">
         <div class="modal-dialog">
             <div class="modal-content" style="background:none; border:none;">

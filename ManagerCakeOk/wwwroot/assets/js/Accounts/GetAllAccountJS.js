@@ -27,12 +27,8 @@ function LoadDataAccount() {
                 Html += '<td>' + item.fullname + '</td>';
                 Html += '<td>' + item.email + '</td>';
                 Html += '<td>' + item.createDate + '</td>';
-                Html += '<td><a href="/Citys/PageDetailCity/?Id=' + item.id + '" data-bs-toggle="tooltip" data-bs-placement="top" title="Xem Quận/Huyện Thuộc">'
-                    + '<i class="fas fa-folder-open"></i></a> | '
-                    + ' <button style="border: none; background: none; color: blue;" name="BtnEditCity" data-bs-toggle="tooltip" data-bs-placement="top" title="Cập Nhật" />'
-                    + '<i class="fas fa-edit"></i></a> | '
-                    + ' <button style="border: none; background: none; color: blue;" name="BtnEditStatus" data-bs-toggle="tooltip" data-bs-placement="top" title="Đổi Trạng Thái" />'
-                    + '<i class="fas fa-cog"></i></a>'
+                Html += '<td><a href="/Account/DetailAccountGet/?IdAccount=' + item.idAccount + '" data-bs-toggle="tooltip" data-bs-placement="top" title="Xem Chi Tiết">'
+                    + '<i class="fas fa-folder-open"></i></a>'
                     + '</td>';
                 Html += '</tr>';
                 $("#BodyData").append(Html);
