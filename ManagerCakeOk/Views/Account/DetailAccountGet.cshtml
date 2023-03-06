@@ -23,24 +23,30 @@
                 <div class="row">
                     <div class="mb-3">
                         <label class="form-label">Email</label>
-                        <input type="email" class="form-control" id="Txt_Email" data-bind="text: Email" disabled />
+                        <input type="email" class="form-control" id="Txt_Email" data-bind="value: Email" disabled />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Khách Hàng Hay Nhân Viên</label>
-                        <input type="text" class="form-control" id="Txt_CustomerOrStaff" data-bind="text: CoustomerStaff" disabled />
+                        <input type="text" class="form-control" id="Txt_CustomerOrStaff" data-bind="value: CoustomerStaff" disabled />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Ngày Tạo</label>
-                        <input type="text" class="form-control" id="Txt_DateCreate" data-bind="text: DateCreate" disabled />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Phân Quyền</label>
-                        <input type="text" class="form-control" id="Txt_Roles" data-bind="text: RoleName" disabled />
+                        <input type="text" class="form-control" id="Txt_DateCreate" data-bind="value: DateCreate" disabled />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nhân Viên Hay Đầu Bếp</label>
-                        <input type="text" class="form-control" id="Txt_StaffOrChef" data-bind="text: StaffChef" disabled />
+                        <input type="text" class="form-control" id="Txt_StaffOrChef" data-bind="value: StaffChef" disabled />
                     </div>
+                    <div class="mb-3">
+                        <input type="hidden" class="form-control" id="Txt_IdStaff" data-bind="value: IdStaff" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <select data-bind="options: availableCountries,
+                       optionsText: 'countryName',
+                       value: selectedCountry,
+                       optionsCaption: 'Choose...'"></select>
+                    </div>
+                    <span data-bind="text: selectedCountry() ? selectedCountry().countryPopulation : 'unknown'"></span>.
                     <p>
                         <button class="btn btn-primary" data-bind="click: InfoAccout"><i class="fas fa-user"></i> Thông Tin Chủ Khoản</button>
                         <button class="btn btn-primary" data-bind="click: ChangeAccount"><i class="fas fa-key"></i> Thay Đổi Mật Khẩu</button>

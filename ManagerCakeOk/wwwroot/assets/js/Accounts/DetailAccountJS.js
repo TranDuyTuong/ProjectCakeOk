@@ -1,57 +1,69 @@
-﻿//Model View Model
-function AccountStaff() {
-    var _self = this;
-    _self.Email = ko.observable('duytuong@gmail.com');
-    _self.CoustomerStaff = ko.observable('');
-    _self.DateCreate = ko.observable('');
-    _self.RoleName = ko.observable('');
-    _self.StaffChef = ko.observable('');
+﻿$(document).ready(function () {
+    ko.applyBindings(AccountStaff, $("html")[0]);
+    //get infomation account
+    CallApi()
+});
+var Country = function (name, population) {
+    this.countryName = name;
+    this.countryPopulation = population;
+};
+//Model View Model
+var AccountStaff = {
+    Email: ko.observable(),
+    CoustomerStaff: ko.observable(),
+    DateCreate: ko.observable(),
+    StaffChef: ko.observable(),
+    IdStaff: ko.observable(),
+    availableCountries: ko.observableArray([
+        new Country("VN", 2000),
+        new Country("US", 2000),
+        new Country("EN", 2000)
+    ]),
+    selectedCountry: ko.observable(),
 
-    _self.InfoAccout = function () {
+    InfoAccout: function () {
+        GetInfoStaff();
+    },
+    ChangeAccount: function () {
 
-    };
-    _self.ChangeAccount = function () {
+    },
+    ChangeInfoAccout: function () {
 
-    };
-    _self.ChangeInfoAccout = function () {
+    },
+    SaveAccount: function () {
 
-    };
-    _self.SaveAccount = function () {
+    },
+    BlockAccount: function () {
 
-    };
-    _self.BlockAccount = function () {
-
-    };
-    ////get infomation account
-    //var Id = $('#IdAccount');
-    //CallApi(Id);
+    },
+};
+//Call Api
+function CallApi() {
+    var Id = $("#IdAccount").val();
+    if (Id.lenght == 0 || Id == '') {
+        toastr.error("Thông Báo Lỗi", "Id không chính xác hoặc bị bỏ trống!");
+    } else {
+        $.ajax({
+            url: "/Account/DetailAccountPost",
+            type: "post",
+            data: {
+                IdAccount: Id
+            },
+            success: function (result) {
+                AccountStaff.Email(result.email);
+                AccountStaff.CoustomerStaff(result.nameCustomerOfStaff);
+                AccountStaff.DateCreate(result.createDate);
+                AccountStaff.StaffChef(result.nameStaffOrChef);
+                AccountStaff.IdStaff(result.idStaff);
+            }
+        });
+        return;
+    }
 }
 
-//Call Api
-//function CallApi(IdAccount) {
-//    var Id = $('#IdAccount');
-//    if (Id.lenght == 0 || Id == '') {
-//        toastr.error("Thông Báo Lỗi", "Id không chính xác hoặc bị bỏ trống!");
-//    } else {
-//        $.ajax({
-//            url: "/Account/DetailAccountPost",
-//            type: "post",
-//            data: {
-//                IdAccount: Id
-//            },
-//            success: function (result) {
-//                var Model_R = (new AccountStaff());
-//                Model_R.Email = result.email;
-//            }
-//        })
-//    }
-//    return;
-//}
-        $(document).ready(function () {
-            var vm = new AccountStaff();
-            ko.applyBindings(vm ,$("html")[0]);
-            vm.initialize();
-            //var Id = $('#IdAccount');
-            //CallApi(Id);
-        });
+//get info staff by id
+function GetInfoStaff() {
+    var Id = $("#Txt_IdStaff").val();
+    console.log(Id);
+};
 

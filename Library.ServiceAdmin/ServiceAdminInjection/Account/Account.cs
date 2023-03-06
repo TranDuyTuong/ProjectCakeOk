@@ -264,7 +264,7 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.Account
                     .FirstOrDefault(x => x.IDCustomerOrStaff == QueryData.IDCustomerOrStaff).Name;
                 FormModel.IdStaff = QueryStaff.FirstOrDefault(x => x.IDAccount == QueryData.IDAccount).IDStaff;
                 FormModel.Email = QueryData.Email;
-                FormModel.PhoneNumber = QueryData.PhoneNumber;
+                FormModel.PhoneNumber = QueryStaff.FirstOrDefault(x => x.IDAccount == QueryData.IDAccount).Phone; ;
                 FormModel.NameStaffOrChef = QueryStaffOrChef
                    .FirstOrDefault(x => x.IDStaffOrChef == QueryStaff
                         .FirstOrDefault(x => x.IDAccount == QueryData.IDAccount).IDStaffOrChef).Name;

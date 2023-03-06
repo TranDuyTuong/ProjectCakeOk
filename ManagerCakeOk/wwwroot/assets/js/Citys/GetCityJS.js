@@ -22,7 +22,8 @@ function GetAllCitys() {
             Seach: Seach,
             Sort: Sort
         },
-        success: function (Result) { 
+        success: function (Result) {
+            console.log(objectdata);
             $.each(Result.l_PaingCitys, function (key, item) {
                 var Html = "";
                 count++;
