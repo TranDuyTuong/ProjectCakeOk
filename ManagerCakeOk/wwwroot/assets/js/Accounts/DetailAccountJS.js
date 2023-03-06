@@ -47,4 +47,11 @@ function AccountStaff() {
 //    }
 //    return;
 //}
+        $(document).ready(function () {
+            var vm = new AccountStaff();
+            ko.applyBindings(vm ,$("html")[0]);
+            vm.initialize();
+            //var Id = $('#IdAccount');
+            //CallApi(Id);
+        });
 
