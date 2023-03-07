@@ -20,7 +20,7 @@
         <div class="row">
             <!-- Left side columns -->
             <div class="col-lg-12">
-                <div class="row">
+                <div class="row" data-bind="with: FollowData">
                     <div class="mb-3">
                         <label class="form-label">Email</label>
                         <input type="email" class="form-control" id="Txt_Email" data-bind="value: Email" disabled />
@@ -40,13 +40,6 @@
                     <div class="mb-3">
                         <input type="hidden" class="form-control" id="Txt_IdStaff" data-bind="value: IdStaff" disabled />
                     </div>
-                    <div class="mb-3">
-                        <select data-bind="options: availableCountries,
-                       optionsText: 'countryName',
-                       value: selectedCountry,
-                       optionsCaption: 'Choose...'"></select>
-                    </div>
-                    <span data-bind="text: selectedCountry() ? selectedCountry().countryPopulation : 'unknown'"></span>.
                     <p>
                         <button class="btn btn-primary" data-bind="click: InfoAccout"><i class="fas fa-user"></i> Thông Tin Chủ Khoản</button>
                         <button class="btn btn-primary" data-bind="click: ChangeAccount"><i class="fas fa-key"></i> Thay Đổi Mật Khẩu</button>
@@ -57,7 +50,24 @@
                 </div>
             </div><!-- End Left side columns -->
             <!-- Right side columns -->
-
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Full Name</th>
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: ListStudent">
+                    <tr>
+                        <th scope="row" data-bind="text: Count"></th>
+                        <td data-bind="text: FullName().fistName"></td>
+                        <td data-bind="text: FullName().lastName"></td>
+                        <td data-bind="text: FullNamesData"></td>
+                    </tr>
+                </tbody>
+            </table>
 
         </div><!-- End Right side columns -->
     </section>

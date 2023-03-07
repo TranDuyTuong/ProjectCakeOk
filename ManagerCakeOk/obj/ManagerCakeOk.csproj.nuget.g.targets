@@ -12,5 +12,6 @@
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.dependencyinjection\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.dependencyinjection\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.DependencyInjection.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.logging\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Logging.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.logging\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Logging.targets')" />
     <Import Project="$(NuGetPackageRoot)microsoft.extensions.caching.abstractions\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Caching.Abstractions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.extensions.caching.abstractions\7.0.0\buildTransitive\netcoreapp2.0\Microsoft.Extensions.Caching.Abstractions.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.mvc.razor.runtimecompilation\5.0.0\buildTransitive\net5.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.mvc.razor.runtimecompilation\5.0.0\buildTransitive\net5.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.targets')" />
   </ImportGroup>
 </Project>

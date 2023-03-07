@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AfBAZz19HeeqbpgJQvxzgzbyEkL9A/auE1fA/0c0YTWaL+5BDK4lcAkzuxnM9KlpLbq1M4JPMb5zsweCZuMabw==",
+  "dgSpecHash": "+ZHC6kwF9mJ9w9/FI8hjwyMcKIHoLmHL3CZWw32amNDzDxr6CQzW82GUUfwe9M2y9O+PeJeHYG6j3LGqWqPSdg==",
   "success": true,
   "projectFilePath": "D:\\Development_Project\\Dev_CareOk\\ProjectStock_BackEnd\\CakeOk_Web\\ProjectCakeOk\\ManagerCakeOk\\ManagerCakeOk.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,8 @@
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.0\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.0.nupkg.sha512",
+    "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.extensions\\5.0.0\\microsoft.aspnetcore.mvc.razor.extensions.5.0.0.nupkg.sha512",
+    "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.mvc.razor.runtimecompilation\\5.0.0\\microsoft.aspnetcore.mvc.razor.runtimecompilation.5.0.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\5.0.0\\microsoft.aspnetcore.razor.language.5.0.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.aspnetcore.razor.runtime\\2.2.0\\microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
@@ -39,6 +41,7 @@
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.extensions.configuration.json\\5.0.0\\microsoft.extensions.configuration.json.5.0.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\duytu\\.nuget\\packages\\microsoft.extensions.dependencymodel\\5.0.0\\microsoft.extensions.dependencymodel.5.0.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\5.0.0\\microsoft.extensions.fileproviders.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\5.0.0\\microsoft.extensions.fileproviders.physical.5.0.0.nupkg.sha512",
     "C:\\Users\\duytu\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\5.0.0\\microsoft.extensions.filesystemglobbing.5.0.0.nupkg.sha512",
