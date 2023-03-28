@@ -259,7 +259,8 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.Account
             if(QueryData.IDAccount != new Guid())
             {
                 FormModel.IdAccount = QueryData.IDAccount;
-                FormModel.CreateDate = QueryData.CreateDate;
+                FormModel.CreateDate = QueryData.CreateDate.ToShortDateString();
+                FormModel.CreateTime = QueryData.CreateDate.ToShortTimeString();
                 FormModel.NameCustomerOfStaff = QueryCustomerStaff
                     .FirstOrDefault(x => x.IDCustomerOrStaff == QueryData.IDCustomerOrStaff).Name;
                 FormModel.IdStaff = QueryStaff.FirstOrDefault(x => x.IDAccount == QueryData.IDAccount).IDStaff;

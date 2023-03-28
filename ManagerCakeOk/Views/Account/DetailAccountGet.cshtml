@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Chi Tiết Tài Khoản";
     Layout = "~/Views/Shared/Page_Home.cshtml";
 }
@@ -20,54 +19,86 @@
         <div class="row">
             <!-- Left side columns -->
             <div class="col-lg-12">
-                <div class="row" data-bind="with: FollowData">
+                <div class="row">
                     <div class="mb-3">
                         <label class="form-label">Email</label>
-                        <input type="email" class="form-control" id="Txt_Email" data-bind="value: Email" disabled />
+                        <input type="email" class="form-control" id="Txt_Email" disabled />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Khách Hàng Hay Nhân Viên</label>
-                        <input type="text" class="form-control" id="Txt_CustomerOrStaff" data-bind="value: CoustomerStaff" disabled />
+                        <input type="text" class="form-control" id="Txt_CustomerOrStaff" disabled />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Ngày Tạo</label>
-                        <input type="text" class="form-control" id="Txt_DateCreate" data-bind="value: DateCreate" disabled />
+                        <input type="text" class="form-control" id="Txt_DateCreate" disabled />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Giờ Tạo</label>
+                        <input type="text" class="form-control" id="Txt_TimeCreate" disabled />
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nhân Viên Hay Đầu Bếp</label>
-                        <input type="text" class="form-control" id="Txt_StaffOrChef" data-bind="value: StaffChef" disabled />
+                        <input type="text" class="form-control" id="Txt_StaffOrChef" disabled />
                     </div>
                     <div class="mb-3">
-                        <input type="hidden" class="form-control" id="Txt_IdStaff" data-bind="value: IdStaff" disabled />
+                        <p style="text-align: right;">Tài Khoản Đã Hoạt Động <b style="color: green; font-weight:600"></b> ngày</p>
                     </div>
+                    <div class="mb-3">
+                        <input type="hidden" class="form-control" id="Txt_IdStaff" disabled />
+                    </div>
+                    <hr />
+                    <h4><i class="fas fa-sign-in-alt"></i> Thông Tin Đăng Nhập</h4>
+
+                    <p style="text-align: right">
+                        Tổng Số Lần Đăng Nhập:
+                        <b style="color:red; font-weight:600">100</b>
+                    </p>
+
                     <p>
-                        <button class="btn btn-primary" data-bind="click: InfoAccout"><i class="fas fa-user"></i> Thông Tin Chủ Khoản</button>
-                        <button class="btn btn-primary" data-bind="click: ChangeAccount"><i class="fas fa-key"></i> Thay Đổi Mật Khẩu</button>
-                        <button class="btn btn-primary" data-bind="click: ChangeInfoAccout"><i class="fas fa-id-card"></i> Thay Đổi Thông Tin</button>
-                        <button class="btn btn-primary" data-bind="click: SaveAccount"><i class="fas fa-save"></i> Lưu Lại</button>
-                        <button class="btn btn-primary" data-bind="click: BlockAccount"><i class="fas fa-lock"></i> Khóa Tài Khoản</button>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <span style="font-size: 12px; font-weight: 600;">Bắt Đầu</span>
+                                <input type="date" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size: 12px; font-weight: 600;">Kết Thúc</span>
+                                <input type="date" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <span style="font-size: 12px; font-weight: 600;">Tìm Kiếm</span><br />
+                                <button type="button" class="btn btn-primary"><i class="fas fa-search-plus"></i></button>
+                            </div>
+                        </div>
+                    </p>
+
+                    <br />
+                    <br />
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Ngày Đăng Nhập</th>
+                                <th scope="col">Thời Gian Đăng Nhập</th>
+                                <th scope="col">Ngày Thoát</th>
+                                <th scope="col">Thời Gian Thoát</th>
+                                <th scope="col">Tổng Giờ Hoạt Động</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>mdo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        <button class="btn btn-primary"><i class="fas fa-key"></i> Thay Đổi Mật Khẩu</button>
                     </p>
                 </div>
             </div><!-- End Left side columns -->
-            <!-- Right side columns -->
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Full Name</th>
-                    </tr>
-                </thead>
-                <tbody data-bind="foreach: ListStudent">
-                    <tr>
-                        <th scope="row" data-bind="text: Count"></th>
-                        <td data-bind="text: FullName().fistName"></td>
-                        <td data-bind="text: FullName().lastName"></td>
-                        <td data-bind="text: FullNamesData"></td>
-                    </tr>
-                </tbody>
-            </table>
 
         </div><!-- End Right side columns -->
     </section>
@@ -99,7 +130,6 @@
     <input type="hidden" value="@ViewBag.IdAccount" id="IdAccount" />
 </main><!-- End #main -->
 @section Scripts{
-    <script src="~/lib/KnockoutJS/knockout-3.5.1.js" asp-append-version="true"></script>
     <script src="~/assets/js/jquery.twbsPagination.min.js" asp-append-version="true"></script>
     <script src="~/assets/js/Accounts/DetailAccountJS.js" asp-append-version="true"></script>
 }

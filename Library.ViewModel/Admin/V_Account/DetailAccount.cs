@@ -9,7 +9,8 @@ namespace Library.ViewModel.Admin.V_Account
     public class DetailAccount
     {
         public Guid IdAccount { get; set; }
-        public DateTime CreateDate { get; set; }
+        public string CreateDate { get; set; }
+        public string CreateTime { get; set; }
         public string Password { get; set; }
         public int IDCustomerOrStaff { get; set; }
         public string Email { get; set; }
