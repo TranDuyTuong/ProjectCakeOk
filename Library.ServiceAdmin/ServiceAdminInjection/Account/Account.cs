@@ -76,7 +76,8 @@ namespace Library.ServiceAdmin.ServiceAdminInjection.Account
                     var Data = new GetAllAccountStaff()
                     {
                         IdAccount = item.IDAccount,
-                        CreateDate = item.CreateDate,
+                        CreateDate = item.CreateDate.ToShortDateString(),
+                        TimeCreate = item.CreateDate.ToShortTimeString(),
                         IDCustomerOrStaff = item.IDCustomerOrStaff,
                         IdStaff = CheckValue.IDStaff,
                         Fullname = CheckValue.FullName,

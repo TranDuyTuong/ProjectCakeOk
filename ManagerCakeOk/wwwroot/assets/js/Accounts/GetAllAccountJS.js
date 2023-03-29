@@ -27,6 +27,7 @@ function LoadDataAccount() {
                 Html += '<td>' + item.fullname + '</td>';
                 Html += '<td>' + item.email + '</td>';
                 Html += '<td>' + item.createDate + '</td>';
+                Html += '<td>' + item.createTime + '</td>';
                 Html += '<td><a href="/Account/DetailAccountGet/?IdAccount=' + item.idAccount + '" data-bs-toggle="tooltip" data-bs-placement="top" title="Xem Chi Tiết">'
                     + '<i class="fas fa-folder-open"></i></a>'
                     + '</td>';

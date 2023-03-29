@@ -2,6 +2,7 @@
 using Library.Utilities;
 using Library.ViewModel.Admin.V_Account;
 using ManagerCakeOk.Models.M_Account;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -19,6 +20,11 @@ namespace ManagerCakeOk.Controllers
             _context = context;
         }
 
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
         //page staff or chef
         [HttpGet]
         public IActionResult PageStaffOrChef()

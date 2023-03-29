@@ -3,8 +3,10 @@ using Library.DataTable.TableUser;
 using Library.DomainData.DataEF;
 using Library.Repository;
 using Library.ServiceAdmin;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -37,7 +39,20 @@ namespace ManagerCakeOk
                 .AddEntityFrameworkStores<ContextDBCakeOk>()
                 .AddDefaultTokenProviders();
 
+            services.AddRazorPages().AddRazorRuntimeCompilation();
+
             services.AddControllersWithViews();
+
+            // TODO: cookie login authentication
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(_ =>
+                {
+                    _.Cookie.Name = "CakeOkLogin";
+                    _.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+                    _.LoginPath = new PathString("/Account/Login");
+                    _.AccessDeniedPath = "/";
+                    _.SlidingExpiration = true;
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,8 +72,9 @@ namespace ManagerCakeOk
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseAuthentication();
             app.UseAuthorization();
+            app.UseCookiePolicy();
 
             app.UseEndpoints(endpoints =>
             {
