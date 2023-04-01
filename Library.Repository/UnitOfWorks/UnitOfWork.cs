@@ -94,6 +94,8 @@ namespace Library.Repository.UnitOfWorks
         private IHistoryUserGetVocherRepository _historyUserGetVocher;
         private IHistoryUseVocherRepository _historyUseVocher;
         private IVocherRepository _vocher;
+        private ITokenLoginRepository _tokenLogin;
+        private ICheckLoginLogoutRepository _checkLoginLogout;
 
         public IStatusCustomCakeRepository statusCustomCakeRepo => _statusCustomCake ?? (_statusCustomCake = new StatusCustomCakeRepository(Context));
         public ISizeCakeRepository sizeCakeRepo => _sizeCake ?? (_sizeCake = new SizeCakeRepository(Context));
@@ -165,6 +167,9 @@ namespace Library.Repository.UnitOfWorks
         public IVocherRepository vocherRepo => _vocher ?? (_vocher = new VocherRepository(Context));
         public IimageBannerWebRepository ImageBannerWebRepo => _ImageBannerWeb ?? (_ImageBannerWeb = new ImageBannerWebRepository(Context));
 
+        public ITokenLoginRepository tokenLoginRepo => _tokenLogin ?? (_tokenLogin = new TokenLoginRepository(Context));
+
+        public ICheckLoginLogoutRepository checkLoginLogoutRepo => _checkLoginLogout ?? (_checkLoginLogout = new CheckLoginLogoutRepository(Context));
 
         public int Complete()
         {

@@ -107,6 +107,8 @@ namespace Library.DomainData.DataEF
 
             modelBuilder.ApplyConfiguration(new ConfigurationStaff());
             modelBuilder.ApplyConfiguration(new ConfigurationStaffOrChef());
+            modelBuilder.ApplyConfiguration(new ConfigurationTokenLogin());
+            modelBuilder.ApplyConfiguration(new ConfigurationCheckLoginLogout());
 
             modelBuilder.ApplyConfiguration(new ConfigurationChangePassword());
             modelBuilder.ApplyConfiguration(new ConfigurationCity());
@@ -198,6 +200,8 @@ namespace Library.DomainData.DataEF
         public DbSet<T_HistoryUserGetVocher> t_HistoryUserGetVochers { get; set; }
         public DbSet<T_HistoryUseVocher> t_HistoryUseVochers{ get; set; }
         public DbSet<T_Vocher> t_Vochers { get; set; }
+        public DbSet<T_TokenLogin> t_TokenLogins { get; set; }
+        public DbSet<T_CheckLoginLogout> t_CheckLoginLogouts { get; set; }
 
     }
 }

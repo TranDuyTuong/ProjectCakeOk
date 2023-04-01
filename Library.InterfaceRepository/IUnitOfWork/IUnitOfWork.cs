@@ -108,6 +108,8 @@ namespace Library.InterfaceRepository.IUnitOfWork
         IMarriageRepository marriageRepo { get; }
         IUserRepository userRepo { get; }
         IViewerCakeUserRepository viewerCakeUserRepo { get; }
+        ITokenLoginRepository tokenLoginRepo { get; }
+        ICheckLoginLogoutRepository checkLoginLogoutRepo { get; }
 
         //--------------------------------------------
         IHistoryUserGetVocherRepository historyUserGetVocherRepo { get; }

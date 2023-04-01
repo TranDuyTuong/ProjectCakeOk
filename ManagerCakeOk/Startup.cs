@@ -13,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Threading.Tasks;
 
 namespace ManagerCakeOk
 {
@@ -39,20 +40,22 @@ namespace ManagerCakeOk
                 .AddEntityFrameworkStores<ContextDBCakeOk>()
                 .AddDefaultTokenProviders();
 
+            // TODO: cookie login authentication
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(options =>
+                {
+                    options.Cookie.Name = "LoginManagerMusic";
+                    options.ExpireTimeSpan = TimeSpan.FromHours(1);
+                    options.LoginPath = new PathString("/Account/Login");
+                    options.AccessDeniedPath = "/Account/Forbidden/";
+                    options.SlidingExpiration = true;
+                });
+
             services.AddRazorPages().AddRazorRuntimeCompilation();
+
 
             services.AddControllersWithViews();
 
-            // TODO: cookie login authentication
-            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(_ =>
-                {
-                    _.Cookie.Name = "CakeOkLogin";
-                    _.ExpireTimeSpan = TimeSpan.FromMinutes(5);
-                    _.LoginPath = new PathString("/Account/Login");
-                    _.AccessDeniedPath = "/";
-                    _.SlidingExpiration = true;
-                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,12 +73,11 @@ namespace ManagerCakeOk
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
             app.UseRouting();
+
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseCookiePolicy();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

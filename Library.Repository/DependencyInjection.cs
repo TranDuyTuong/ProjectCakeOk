@@ -102,6 +102,8 @@ namespace Library.Repository
             services.AddScoped<IMarriageRepository, MarriageRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IViewerCakeUserRepository, ViewerCakeUserRepository>();
+            services.AddScoped<ICheckLoginLogoutRepository, CheckLoginLogoutRepository>();
+            services.AddScoped<ITokenLoginRepository, TokenLoginRepository>();
 
             services.AddScoped<IHistoryUserGetVocherRepository, HistoryUserGetVocherRepository>();
             services.AddScoped<IHistoryUseVocherRepository, HistoryUseVocherRepository>();

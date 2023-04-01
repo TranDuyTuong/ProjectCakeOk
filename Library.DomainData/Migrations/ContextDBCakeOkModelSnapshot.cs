@@ -2108,6 +2108,40 @@ namespace Library.DomainData.Migrations
                     b.ToTable("T_ChangePasswords");
                 });
 
+            modelBuilder.Entity("Library.DataTable.TableUser.T_CheckLoginLogout", b =>
+                {
+                    b.Property<DateTime>("WorkingStart")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("DateEnd")
+                        .HasColumnType("text");
+
+                    b.Property<string>("DateStart")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<int>("HourWoking")
+                        .HasColumnType("int");
+
+                    b.Property<byte[]>("IDStaff")
+                        .IsRequired()
+                        .HasColumnType("varbinary(16)");
+
+                    b.Property<string>("TimeEnd")
+                        .HasColumnType("text");
+
+                    b.Property<string>("TimeStart")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<DateTime?>("WorkingEnd")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("WorkingStart");
+
+                    b.ToTable("T_CheckLoginLogouts");
+                });
+
             modelBuilder.Entity("Library.DataTable.TableUser.T_City", b =>
                 {
                     b.Property<int>("IDCity")
@@ -2369,6 +2403,28 @@ namespace Library.DomainData.Migrations
                     b.HasKey("IDMarriage");
 
                     b.ToTable("T_Marriages");
+                });
+
+            modelBuilder.Entity("Library.DataTable.TableUser.T_TokenLogin", b =>
+                {
+                    b.Property<int>("IDToken")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("EmailLogin")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("TokenString")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("IDToken");
+
+                    b.ToTable("T_TokenLogins");
                 });
 
             modelBuilder.Entity("Library.DataTable.TableUser.T_User", b =>

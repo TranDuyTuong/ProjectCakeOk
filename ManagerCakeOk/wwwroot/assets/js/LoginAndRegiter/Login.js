@@ -23,6 +23,24 @@ $("#Btn_Login").click(function(){
         return;
     }
     $("#modal_LoadingSignIn").show();
+    $.ajax({
+        url: "/Account/LoginSystem",
+        type: "post",
+        data: {
+            Username: GetEmail,
+            Password: GetPassword,
+            RequestPath: $("#TxtRequestPath").val()
+        },
+        success: function (result) {
+            if (result == 0) {
+                $("#modal_LoadingSignIn").hide();
+                toastr.error("Thông Báo Lỗi", "Đăng Nhập Thất Bại!");
+            } else {
+                window.location.href = result.requestPath;
+            }
+            return;
+        }
+    })
 });
 
 //validate Email

@@ -606,10 +606,6 @@ D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\ManagerCakeOk.TagHelpers.input.cache
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\ManagerCakeOk.TagHelpers.output.cache
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\ManagerCakeOk.RazorCoreGenerate.cache
-D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Account\DetailAccountGet.cshtml.g.cs
-D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Account\PageAccount.cshtml.g.cs
-D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Account\PageCreateAccount.cshtml.g.cs
-D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Account\PageStaffOrChef.cshtml.g.cs
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Citys\PageCity.cshtml.g.cs
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Citys\PageCreateCity.cshtml.g.cs
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Citys\PageDetailCity.cshtml.g.cs
@@ -635,7 +631,6 @@ D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Shared\Page_Regiter.cshtml.g.cs
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
-D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\SignIn\PageLogin.cshtml.g.cs
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\ManagerCakeOk.RazorTargetAssemblyInfo.cache
@@ -647,3 +642,8 @@ D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\ManagerCakeOk.pdb
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\ManagerCakeOk.genruntimeconfig.cache
 D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Account\Login.cshtml.g.cs
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\ManagerAccount\DetailAccountGet.cshtml.g.cs
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\ManagerAccount\PageAccount.cshtml.g.cs
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\ManagerAccount\PageCreateAccount.cshtml.g.cs
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\ManagerAccount\PageStaffOrChef.cshtml.g.cs
+D:\Development_Project\Dev_CareOk\ProjectStock_BackEnd\CakeOk_Web\ProjectCakeOk\ManagerCakeOk\obj\Debug\net5.0\Razor\Views\Account\Forbidden.cshtml.g.cs
